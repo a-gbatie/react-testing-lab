@@ -1,6 +1,4 @@
-import React from "react";
-
-function Transaction({transaction}) {
+function Transaction({ transaction }) {
   return (
     <tr>
       <td>{transaction.date}</td>

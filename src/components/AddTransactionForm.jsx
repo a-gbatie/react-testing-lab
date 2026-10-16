@@ -1,5 +1,3 @@
-import React from "react";
-
 function AddTransactionForm({ postTransaction }) {
   function submitForm(e) {
     e.preventDefault();
