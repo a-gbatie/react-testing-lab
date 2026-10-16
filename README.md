@@ -1,95 +1,65 @@
-# Lab: Testing using Vitest
+# React Testing Lab with Vitest
 
-## Overview
-Now that you have covered creating a testing suite, we can use the key principles of test-driven development to work with an existing app. Normally, you would build the testing while developing, but you were recently brought onto this project to add a testing suite! You are working to implement a testing suite for a banking application that allows users to track their expenditures by submitting and searching through them.
+## Project Description
 
-## Task 1: Define the Problem
-- Build a testing suite for an existing application.
+A React bank transaction application that allows users to view, add, search, and sort transactions.
 
-## Task 2: Determine the Design
-- Identify the key features of this project.
+The application fetches transaction data from a local JSON Server API and uses Vitest and React Testing Library to test its functionality.
 
-## Task 3: Develop the Code
-- One feature needs to be completed: the search functionality.
+## Technologies Used
 
-## Task 4: Test and Refine
-- Build a test suite using Vitest to test key features:
-  - Display transactions
-  - Add transactions
-  - Search transactions and sort transactions
+- React
+- JavaScript
+- Vite
+- Vitest
+- React Testing Library
+- JSON Server
+- HTML and CSS
 
-## Task 5: Document and Maintain
-- Commit as you go, writing meaningful commit messages.
-- Push commit history to GitHub periodically and when the lab is complete.
+## How to Run the Project
 
-## Tools and Resources
-- Vitest: [Vitest Documentation](https://vitest.dev/guide/)
+1. Clone the repository and navigate into the project directory.
 
-## Instructions
+2. Install dependencies:
 
-### Set Up
-Before we begin coding, let's complete the initial setup for this lesson:
-
-#### Fork and Clone
-1. Go to the provided GitHub repository link.
-2. Fork the repository to your GitHub account.
-3. Clone the forked repository to your local machine.
-
-#### Open and Run File
-1. Open the project in VSCode.
-2. Run `npm install` to install all necessary dependencies.
-
-### Instructions
-#### Task 1: Define the Problem
-- Build a testing suite for an existing application.
-
-#### Task 2: Determine the Design
-- Identify the key features of this project.
-
-#### Task 3: Develop, Test, and Refine the Code
-
-1. Open the React application in the browser:
-   ```sh
-   npm run dev
+   ```bash
+   npm install
    ```
-2. Run the included backend:
-   ```sh
+
+3. Start the JSON Server:
+
+   ```bash
    npm run server
    ```
-3. Create a test branch.
 
-#### Display Transactions Test
-- Create a test suite that will test if transactions are displayed on startup.
+   The API runs at `http://localhost:6001/transactions`.
 
-#### Add Transactions Test
-- Create a test suite that will test:
-  - If new transactions are added to the frontend.
-  - If a POST request was called.
+4. Open a second terminal and start the React application:
 
-#### Search Transactions and Sort Transactions Test
-- Create a test suite that will test:
-  - If a change event is triggered, the page updates accordingly.
-  - Search is incomplete, so build out the search functionality based on the test.
+   ```bash
+   npm run dev
+   ```
 
-4. Push the feature branch and open a PR on GitHub.
-5. Merge to `main`.
+5. Open the local URL displayed in the terminal to view the application.
 
-### Task 4: Document and Maintain
-#### Best Practice Documentation Steps:
-- Add comments to the code to explain purpose and logic.
-- Clarify intent/functionality of code for other developers.
-- Add screenshots of completed work included in Markdown in `README.md`.
-- Update `README.md` to reflect the functionality of the application following [Make a README](https://makeareadme.com).
-- Delete any stale branches on GitHub.
-- Remove unnecessary/commented-out code.
-- If needed, update `.gitignore` to remove sensitive data.
+## How to Run Tests
 
-### Submission
-- Once the test suite is built, submit the link to the GitHub repository on Canvas.
+Run the test suite:
 
-### Grading Criteria
-- The application has test suites.
-- The application tests if transactions display on load.
-- The application tests if a new transaction can be added.
-- The application tests if search functionality updates the page correctly.
+```bash
+npm test -- --run
+```
 
+Run tests in watch mode:
+
+```bash
+npm test
+```
+
+The tests cover:
+
+- Displaying transactions fetched from the API
+- Adding new transactions using a POST request
+- Searching transactions by description
+- Sorting transactions by category
+- Rendering the main application
